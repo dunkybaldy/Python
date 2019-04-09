@@ -1,0 +1,36 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "echo Hello"
+        },
+        {
+            "label": "Run Python",
+            "command": "python ${workspaceFolder}\\src\\${input:ChooseBuildProject}\\main.py",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "ChooseBuildProject",
+            "type": "pickString",
+            "description": "What folder would you like to run?",
+            "options": ["Calculator", "CompanySim"],
+        },
+        {
+            "id": "SpecifyBuildProject",
+            "type": "promptString",
+            "description": "What is the folder called where your Main.py is located?",
+            "default": "example"
+        }
+    ]
+}
