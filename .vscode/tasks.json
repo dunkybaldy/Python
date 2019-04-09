@@ -20,7 +20,7 @@
         },
         {
             "label": "Python - Test Suite",
-            "command": "python ${workspaceFolder}\\tst\\*.py",
+            "command": "python ${workspaceFolder}\\tst\\test_CompanySim.py",
             "type": "shell",
             "group": {
                 "kind": "test",
