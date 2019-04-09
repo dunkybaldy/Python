@@ -39,6 +39,13 @@ class Window(Frame):
         exit()
 
     def AddButton(self, text, function, x, y):
+        '''(str, func, float, float) -> None'''
         button = Button(self.master, text=text, command=function)
         button.pack()
         button.place(x=x, y=y)
+
+    def CreateEntryBox(self) -> str:
+        entryBox = Entry(self.master, bd = 5)
+        entryBox.pack()
+        entryBox.place(x=(self.master.winfo_width() / 2), y=(self.master.winfo_height() / 2))
+        return entryBox.get()

@@ -3,13 +3,15 @@ from Company import Company
 
 companies = []
 
-def AddCompany():
-    print("AddCompany called")
-    com = Company("Twats R Us")
+def AddCompany(app):
+    name = app.CreateEntryBox()
+    com = Company(name)
     companies.append(com)
 
 app = Window("GUI", "1280x720")
-app.AddButton("Button", AddCompany, 50, 50)
+app.AddButton("Button", AddCompany(app), 50, 50)
 app.mainloop()
 
-print (len(companies))
+for company in companies:
+    print (company.name)
+
