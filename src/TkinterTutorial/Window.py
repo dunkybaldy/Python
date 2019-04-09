@@ -41,4 +41,4 @@ class Window(Frame):
     def AddButton(self, text, function, x, y):
         button = Button(self.master, text=text, command=function)
         button.pack()
-        button.place(x=50, y=50)
+        button.place(x=x, y=y)
