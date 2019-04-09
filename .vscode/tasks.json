@@ -9,11 +9,21 @@
             "command": "echo Hello"
         },
         {
-            "label": "Run Python",
+            "label": "Python - Run Project",
             "command": "python ${workspaceFolder}\\src\\${input:ChooseBuildProject}\\main.py",
             "type": "shell",
             "group": {
                 "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Python - Test Suite",
+            "command": "python ${workspaceFolder}\\tst\\*.py",
+            "type": "shell",
+            "group": {
+                "kind": "test",
                 "isDefault": true
             },
             "problemMatcher": []

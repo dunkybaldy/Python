@@ -15,11 +15,11 @@ class Employee:
     def Salary(self, salary):
         if salary != self.salary:
             self.salary = salary
-        return
+        return self.salary
 
     def Company(self, company):
         if company != self.company:
             self.company = company
-        return
+        return self.company
         
     

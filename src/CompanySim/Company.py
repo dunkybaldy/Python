@@ -20,4 +20,4 @@ class Company:
         # add to employees
         emp = Employee(self.name, salary, name, jobRole)
         self.employees.append(emp)
-        print("We'd like to welcome " + name + " to " + self.name + ". We now have " + self.employees.count + " employees!")
+        self.requiredMonthlyIncomeToPayEmployees += salary
