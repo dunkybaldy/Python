@@ -34,7 +34,7 @@
             "id": "ChooseBuildProject",
             "type": "pickString",
             "description": "What folder would you like to run?",
-            "options": ["Calculator", "CompanySim"],
+            "options": ["CompanySim"],
         },
         {
             "id": "SpecifyBuildProject",
